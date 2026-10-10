@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Internistas Amarelos — Quiz de Exames Laboratoriais</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topo">
+  <div class="logo">🩺</div>
+  <h1>Internistas <span>Amarelos</span></h1>
+  <p class="subtitulo">Quiz dos Valores de Referência de Exames Laboratoriais</p>
+</header>
+
+<main class="container">
+
+  <!-- TELA INICIAL -->
+  <section id="tela-inicio" class="tela ativa">
+    <h2>Pronto para testar seus conhecimentos?</h2>
+    <p>O quiz contém <strong id="total-questoes">0</strong> questões sobre os parâmetros
+       e valores de referência de exames laboratoriais em adultos.</p>
+    <button class="btn btn-grande" onclick="iniciarQuiz()">▶ Iniciar Quiz</button>
+  </section>
+
+  <!-- TELA DO QUIZ -->
+  <section id="tela-quiz" class="tela">
+    <div class="barra-progresso">
+      <div id="barra"></div>
+    </div>
+    <div class="info-questao">
+      <span id="numero-questao"></span>
+      <span id="pontos">Pontos: 0</span>
+    </div>
+    <div class="card-questao">
+      <span id="categoria" class="categoria"></span>
+      <h3 id="pergunta"></h3>
+      <div id="opcoes" class="opcoes"></div>
+      <div id="feedback" class="feedback"></div>
+      <button id="btn-proxima" class="btn" onclick="proximaQuestao()">Próxima ➜</button>
+    </div>
+  </section>
+
+  <!-- TELA DE RESULTADO -->
+  <section id="tela-resultado" class="tela">
+    <h2>Resultado Final 🏁</h2>
+    <div class="resultado-card">
+      <div id="emoji-resultado" class="emoji-grande"></div>
+      <p id="acertos" class="acertos"></p>
+      <p id="mensagem-resultado" class="mensagem"></p>
+      <button class="btn btn-grande" onclick="iniciarQuiz()">🔄 Jogar Novamente</button>
+      <button class="btn btn-voltar" onclick="voltarInicio()">🏠 Início</button>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Internistas Amarelos • Material educativo baseado em valores de referência aproximados em adultos.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

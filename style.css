@@ -1,0 +1,70 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+
+body { background: linear-gradient(135deg, #fdf3d7 0%, #fbe8b0 50%, #f7d774 100%); min-height: 100vh; }
+
+/* ===== TOPO ===== */
+.topo { text-align: center; padding: 30px 15px 15px; }
+.logo { font-size: 50px; }
+.topo h1 { color: #8a6d00; font-size: 2.2rem; letter-spacing: 1px; }
+.topo h1 span { color: #d4a900; }
+.subtitulo { color: #7a6a2f; margin-top: 5px; font-style: italic; }
+
+/* ===== CONTAINER ===== */
+.container { max-width: 700px; margin: 20px auto 40px; padding: 0 15px; }
+
+.tela { display: none; animation: aparecer 0.4s ease; }
+.tela.ativa { display: block; }
+@keyframes aparecer { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ===== TELA INICIAL ===== */
+#tela-inicio { text-align: center; background: #fffdf5; border-radius: 16px; padding: 40px 25px; box-shadow: 0 6px 20px rgba(140,110,0,.15); }
+#tela-inicio h2 { color: #8a6d00; margin-bottom: 12px; }
+#tela-inicio p { color: #6b5d1e; margin-bottom: 25px; }
+
+/* ===== BOTÕES ===== */
+.btn { background: #d4a900; color: #fff; border: none; border-radius: 10px; padding: 12px 28px; font-size: 1rem; cursor: pointer; transition: .2s; font-weight: bold; }
+.btn:hover { background: #b89300; transform: scale(1.04); }
+.btn-grande { font-size: 1.2rem; padding: 15px 40px; }
+.btn-voltar { background: #a89f85; margin-left: 10px; }
+.btn-voltar:hover { background: #8d8570; }
+
+/* ===== QUIZ ===== */
+.barra-progresso { background: #e8dcb0; border-radius: 20px; height: 12px; overflow: hidden; margin-bottom: 15px; }
+#barra { height: 100%; width: 0%; background: linear-gradient(90deg, #d4a900, #f0c420); border-radius: 20px; transition: width .4s ease; }
+
+.info-questao { display: flex; justify-content: space-between; color: #7a6a2f; font-weight: bold; margin-bottom: 12px; }
+
+.card-questao { background: #fffdf5; border-radius: 16px; padding: 30px 25px; box-shadow: 0 6px 20px rgba(140,110,0,.15); }
+
+.categoria { display: inline-block; background: #fbe8b0; color: #8a6d00; font-size: .8rem; font-weight: bold; padding: 5px 14px; border-radius: 20px; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+
+#pergunta { color: #4a3f10; font-size: 1.3rem; margin-bottom: 20px; }
+
+.opcoes { display: flex; flex-direction: column; gap: 10px; }
+
+.opcao { background: #fdf6dd; border: 2px solid #e8d690; border-radius: 10px; padding: 13px 18px; text-align: left; font-size: 1rem; cursor: pointer; color: #4a3f10; transition: .2s; }
+.opcao:hover:not(:disabled) { background: #fbe8b0; border-color: #d4a900; transform: translateX(5px); }
+
+.opcao.certa { background: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+.opcao.errada { background: #f8d7da; border-color: #dc3545; color: #721c24; }
+.opcao:disabled { cursor: default; }
+
+.feedback { margin: 15px 0; font-weight: bold; min-height: 24px; }
+.feedback.certa { color: #28a745; }
+.feedback.errada { color: #dc3545; }
+
+#btn-proxima { display: none; margin-top: 10px; }
+
+/* ===== RESULTADO ===== */
+#tela-resultado { text-align: center; background: #fffdf5; border-radius: 16px; padding: 40px 25px; box-shadow: 0 6px 20px rgba(140,110,0,.15); }
+#tela-resultado h2 { color: #8a6d00; margin-bottom: 20px; }
+.emoji-grande { font-size: 70px; margin-bottom: 10px; }
+.acertos { font-size: 1.5rem; color: #4a3f10; font-weight: bold; margin-bottom: 10px; }
+.mensagem { color: #6b5d1e; margin-bottom: 25px; font-size: 1.05rem; }
+
+footer { text-align: center; color: #8d8570; padding: 15px; font-size: .85rem; }
+
+@media (max-width: 480px) {
+  .topo h1 { font-size: 1.6rem; }
+  #pergunta { font-size: 1.1rem; }
+}
